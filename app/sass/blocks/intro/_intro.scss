@@ -1,0 +1,99 @@
+// Intro section
+.intro {
+    position: relative;
+    background-image: url('/images/introBg.jpg');
+    @include breakpoint(mobile) {
+        height: auto;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+        background-image: none;
+    }
+
+    &__scrollDown {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+
+        cursor: pointer;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.dancerMobile {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+        width: 100%;
+    }
+}
+
+// LogoHolder section
+.logoHolder {
+    width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+    @include breakpoint(widescreen) {
+        width: 40%;
+    }
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    &.go {
+        width: 8%;
+        left: 50%;
+
+        // @include breakpoint(widescreen) {
+        //     top: 8rem;
+        // }
+
+        @include breakpoint(mobile) {
+            top: -40%;
+        }
+
+        .logo,
+        .logo-bg {
+            -webkit-animation: logo-animation 1s linear;
+            animation: logo-animation 1s linear;
+        }
+    }
+}
+
+.logo {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.logo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+//Curtain
+.curtain {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #0e0c1b;
+    opacity: 0.9;
+    transition: opacity 0.9s ease;
+    &.open {
+        opacity: 0;
+        z-index: -1;
+    }
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}

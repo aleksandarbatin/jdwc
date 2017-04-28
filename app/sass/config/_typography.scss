@@ -1,0 +1,92 @@
+//-------------------------
+//---------------TYPOGRAPHY
+//-------------------------
+
+//------FONT-FACE
+
+@font-face {
+  font-family: 'DinCond-Medium';
+  src: url('/fonts/dincondm-webfont.eot') format('eot'),
+         url('/fonts/dincondm-webfont.ttf') format('ttf'),
+         url('/fonts/dincondm-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DinCond-Regular';
+  src: url('/fonts/dincondr-webfont.ttf') format('ttf'),
+         url('/fonts/dincondr-webfont.eot') format('eot'),
+         url('/fonts/dincondr-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'JustDance-Bold';
+  src: url('/fonts/JustDance-Bold.otf') format('otf'),
+       url('/fonts/JustDance-Bold.ttf') format('ttf'),
+       url('/fonts/JustDance-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('/fonts/fontello.eot?76832325');
+  src: url('/fonts/fontello.eot?76832325#iefix') format('embedded-opentype'),
+       url('/fonts/fontello.woff2?76832325') format('woff2'),
+       url('/fonts/fontello.woff?76832325') format('woff'),
+       url('/fonts/fontello.ttf?76832325') format('truetype'),
+       url('/fonts/fontello.svg?76832325#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//------DIMENSIONS
+$baseFontSize: 10; // DO NOT CHANGE THIS
+
+html {
+    $fontSizePX: $baseFontSize + 'px';
+    font-size  : $fontSizePX;
+  //change this part
+    @include breakpoint (desktop--Large) {
+        font-size: 0.52083333vw; //10px
+    }
+    @include breakpoint (lapTop) {
+        font-size: 0.9765625vw;//10px
+    }
+    @include breakpoint (mobile) {
+        font-size: 1.303781vw;
+    }
+    // @include breakpoint (mobile--XL) {
+    //     font-size: 1.5625vw;
+    // }
+    // @include breakpoint (mobile--L) {
+    //     font-size:  2.352941vw;
+    // }
+}
+
+//------FONTS
+$fontDefault     : Arial, Helvetica, Tahoma, sans-serif;
+$baseFont        : 'DinCond-Regular', $fontDefault;
+
+
+
+//------GLOBAL FONT SETTINGS
+body {
+    font-size: 100%;
+    font-family: $baseFont;
+}
+
+//------DEFAULT STYLES
+b,
+strong {
+    font-weight: bold;
+}
+i,
+em {
+    font-style: italic;
+}
+u {
+    text-decoration: underline;
+}
+
+//------STYLES
+h1 {
+    font-size: 7.2rem;
+}

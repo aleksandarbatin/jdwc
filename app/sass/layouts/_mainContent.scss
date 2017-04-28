@@ -1,0 +1,18 @@
+//---------------------------
+//----------------- MAIN
+//---------------------------
+
+.sectionWrapper {
+	 position: absolute;
+	 height: 74.2vh;
+	 width: 100%;
+	 top: 4vh;
+	 z-index: 1;
+	 @include breakpoint(mobile) {
+	 	position: static;
+	 	height: auto;
+	 	background-image: url('/images/BgMobile.jpg');
+	 	background-size: cover;
+	 	background-position: top center;
+	 }
+}

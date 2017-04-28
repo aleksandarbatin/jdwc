@@ -1,0 +1,16 @@
+//------------------------------
+//---------------- CONTAINER
+//------------------------------
+
+.section__container {
+    width: 65%;
+    margin: 0 auto;
+
+    @include breakpoint(lapTop) {
+        width: 100%;
+    }
+    
+    @include breakpoint(mobile) {
+    	width: 100%;
+    }
+}

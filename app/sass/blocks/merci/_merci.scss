@@ -1,0 +1,36 @@
+//-------------------------
+//-------------MERCI
+//-------------------------
+
+.merci {
+	// display: none;
+	padding: 19rem;
+	background-image: url('/images/merciBg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	text-align: center;
+	@include breakpoint(mobile) {
+		background-size: 200%;
+	}
+	.section__container {
+		margin-top: 22rem;
+	}
+
+	&__title {
+		@extend .title;
+		font-size: 11rem;
+		margin-bottom: 2rem;
+		@include breakpoint(mobile) {
+			font-size: 12rem;	
+		}
+	}
+	.btn {
+		padding: 2rem 4.4rem 1rem;
+		font-size: 4.6rem;
+		@include breakpoint(mobile) {
+		    padding: 1.5rem 2.8rem 0.5rem;
+			font-size: 5rem;
+		}
+	}
+}

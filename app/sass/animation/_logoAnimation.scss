@@ -1,0 +1,22 @@
+//----------------------
+//--------LOGO ANIMATION
+//----------------------
+
+@keyframes logo-animation {
+    0% {
+        -webkit-transform: rotate3d(0,0,0,0);
+        transform: rotate3d(0,0,0,0);
+    }
+    70%  {
+        -webkit-transform: rotate3d(44,15,6,160deg) ;
+        transform: rotate3d(44,15,6,160deg) ;
+    }
+    80% {
+        -webkit-transform: rotate3d(100,-40,6,100deg);
+        transform: rotate3d(100,-40,6,100deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(-180,14,0,0deg) ;
+        transform: rotate3d(-180,14,0,0deg);
+    }
+}

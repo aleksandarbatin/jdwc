@@ -1,0 +1,26 @@
+//-------------------------
+//--------PAGE PILING
+//-------------------------
+
+// .pp-section {
+//     height: 90%!important;
+// }
+
+.pp-tableCell {
+	display: initial!important;
+}
+.section {
+	position: absolute;
+	// background-image: url('#{$path-images}/jd.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	@include breakpoint(mobile) {
+		position: static;
+	}
+}
+
+#pp-nav {
+	display: none;
+}
+

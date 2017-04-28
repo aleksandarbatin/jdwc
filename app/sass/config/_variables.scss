@@ -1,0 +1,47 @@
+//-------------------------
+//----------------VARIABLES
+//-------------------------
+
+//-----COLORS ver--PDF
+
+$c-black           : #000;
+$c-white           : #fff;
+$c-shadowBlack     : #101010;
+$c-shadesNero      : #222222;
+$c-lightGray       : #333;
+$c-btnColor        : #14C8FB;
+$c-languageLinks   : #5c5c5c;
+$c-battleshipGrey  : #595B58;
+$c-suvaGray        : #8C8C8C;
+
+
+
+//-----PATHS
+$fontBaseUrl   : "http://static1.webedia.fr/fonts/";
+$localFontBase : "/_common/fonts";
+$imgBaseUrl    : "/web/skins/default/";
+$fontFontello  : "fontello";
+
+
+//------DIMENSIONS
+$baseFontSize: 10;
+$fullWidth: 100%;
+$fullHeight: 100%;
+$largeImageFlagWidth: 50%;
+
+//------FONT
+$titleFont: 'JustDance-Bold';
+$descriptionFont: 'DinCond-Regular';
+$textMedium     : 'DinCond-Medium';
+
+
+//------MEDIA QUERIES
+$widescreen      : 1600px;
+$desktop--Large  : 1440px;
+$desktop         : 1250px;
+$lapTop          : 1024px;
+$tabletLandscape : 990px;
+$tablet          : 768px;
+$mobile			 : 767px;
+$mobile--XL      : 640px;
+$mobile--L       : 425px;

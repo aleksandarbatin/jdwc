@@ -1,0 +1,40 @@
+//------------------------------
+//---------------- SUBSCRIBE
+//------------------------------
+
+.subscribe {
+	background-image: url('/images/subscribeBBg.jpg');
+	text-align: center;
+	@include breakpoint(mobile) {
+		background-image: none;
+		padding: 20rem 0;
+	}
+	&__title {
+		@extend .title;
+		margin-bottom: 0.5rem;
+		@include breakpoint(mobile) {
+			font-size: 7rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+	.section__container {
+		margin-top: 23vh;
+		@include breakpoint(mobile) {
+			margin-top: 0;
+		}
+	}
+	&__description {
+		@extend .description; 
+		width: 50%;
+		margin: 0 auto;
+		margin-bottom: 6rem;
+		padding: 0 5rem;
+		@include breakpoint(toDesktop) {
+			padding: 0;
+		}
+		@include breakpoint(mobile) {
+			width: 98%;
+			margin-bottom: 6rem;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+//------------------------------
+//---------------- BTN
+//------------------------------
+
+.btn {
+	background-color: $c-btnColor;
+	padding: 2.5rem 1.2rem 1rem;
+	font-family: $titleFont;
+	font-size: 6rem;
+	color: $c-white;
+	text-transform: uppercase;
+	@include breakpoint(mobile) {
+		padding: 2.7rem 2.5rem 1rem;
+		font-size: 7rem;
+	}
+}

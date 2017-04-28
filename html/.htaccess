@@ -1,0 +1,31 @@
+# Domain rules
+
+#jdwc.com
+#RewriteCond %{HTTP_HOST}   ^jdwc.devwebedia.com:8080 [NC]
+#RewriteRule ^/?(.*)         jdwc.devwebedia.com:8080/$1 [L,R=301]
+
+# Remove www from any URLs that have them:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule ^(.*)$ http://jdwc.devwebedia.com:8080/$1 [R=301,L]
+
+RewriteRule ^()$ http://jdwc.devwebedia.com:8080/fr [R=301,L]
+
+#site match
+Options +FollowSymlinks
+RewriteEngine on
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+ErrorDocument 404 /index.php?error=404
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
